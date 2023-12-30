@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Production Server](#production-server)
+- [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -20,6 +21,14 @@ One notable feature is the adaptability of this infrastructure. The entire `/src
 ## Production Server
 
 Visit the [https://arian-sharetrip.onrender.com/search?keyword=tempora](https://arian-sharetrip.onrender.com/search?keyword=tempora) to explore the live application.
+
+## Tech Stack
+   - Nodejs ✅
+   - ExpressJS ✅
+   - TypeScript ✅
+   - Prisma ✅
+   - MongoDB ✅
+   - Zod ✅
 
 ## Getting Started
 
