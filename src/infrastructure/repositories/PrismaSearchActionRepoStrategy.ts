@@ -1,6 +1,6 @@
 import SearchActionRepoStrategy from "@/infrastructure/repositories/interfaces/SearchActionRepoStrategy";
 import SearchActionEntity from "@/infrastructure/entities/SearchActionEntity";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, SearchAction } from "@prisma/client";
 
 export default class PrismaSearchActionRepoStrategy
   implements SearchActionRepoStrategy
@@ -11,7 +11,7 @@ export default class PrismaSearchActionRepoStrategy
     this.prisma = new PrismaClient();
   }
 
-  async recordSearchAction(searchAction: SearchActionEntity) {
+  async recordSearchAction(searchAction: SearchActionEntity): Promise<any> {
     // map to prisma schema for insertion
     const prismaSchemaMappedData = {
       userIP: searchAction.userIP,
