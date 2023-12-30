@@ -4,7 +4,7 @@
   "description": "RESTAPI backend for external posts api search and persist in database.",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf build && tsc && TS_NODE_BASEURL=./build node -r tsconfig-paths/register build/index.js",
+    "start": "TS_NODE_BASEURL=./build node -r tsconfig-paths/register build/index.js",
     "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
     "build": "rm -rf build && tsc",
     "test": "jest --watchAll --collectCoverage"
