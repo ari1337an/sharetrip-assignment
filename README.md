@@ -9,7 +9,8 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Environment Variables](#environment-variables)
-
+- [Onboarding Docs](#onboarding-docs)
+  
 ## Introduction
 
 This is a pre-interview assignment project from [ShareTrip](https://sharetrip.net)'s hirings, focusing on an ExpressJS backend within a NodeJS environment. The underlying codebase adopts a [clean architecture](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164) methodology, prioritizing maintainability, scalability, and testability by systematically segregating third-party dependencies from the core business logic.
@@ -64,3 +65,8 @@ DATABASE_URL="mongodb+srv://<username>:<password>@<hostname>/<database>"
 ```
 
 Refer to the `sampleenv` file for a sample structure of the environment file.
+
+## Onboarding Doc
+
+Commit messages style/structure: [Conventional Commit Message Style](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
