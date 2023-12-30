@@ -38,7 +38,7 @@ Commit messages style/structure: [Conventional Commit Message Style](https://gis
 
 Project architecture:
 
-![Clean Architecture Diagram](docs/architecture.jpg)
+![Clean Architecture Diagram](docs/architecture-diagram.jpg)
 
 ## Getting Started
 
