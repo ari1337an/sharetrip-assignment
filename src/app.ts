@@ -12,6 +12,9 @@ const app = express()
 // Set port
 app.set("port", config.PORT)
 
+// Routes
+import searchRoute from '@/routes/searchRoute'
+
 /**
  * Use all core packages
  * 
@@ -22,6 +25,11 @@ app.use(express.json())
 
 // Start Logging Requests in the console
 // app.use(middlewares.requestLogger)
+
+/**
+ * Use the Routes
+ */
+app.use('/search', searchRoute)
 
 /**
  * Handle the unknown endpoint, if no controller is defined for requested endpoint
