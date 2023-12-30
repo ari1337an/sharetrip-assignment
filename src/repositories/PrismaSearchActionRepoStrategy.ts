@@ -1,6 +1,6 @@
-import SearchActionRepoStrategy from "@/infrastructure/repositories/interfaces/SearchActionRepoStrategy";
+import SearchActionRepoStrategy from "@/infrastructure/repositories/SearchActionRepoStrategy";
 import SearchActionEntity from "@/infrastructure/entities/SearchActionEntity";
-import { PrismaClient, SearchAction } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 export default class PrismaSearchActionRepoStrategy
   implements SearchActionRepoStrategy

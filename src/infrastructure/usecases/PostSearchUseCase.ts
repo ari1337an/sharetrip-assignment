@@ -1,5 +1,5 @@
 import PostEntity from "@/infrastructure/entities/PostEntity";
-import SearchActionRepoStrategy from "@/infrastructure/repositories/interfaces/SearchActionRepoStrategy";
+import SearchActionRepoStrategy from "@/infrastructure/repositories/SearchActionRepoStrategy";
 import SearchActionEntity from "@/infrastructure/entities/SearchActionEntity";
 
 /**

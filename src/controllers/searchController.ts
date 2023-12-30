@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import helper from "@/utils/helper";
 import config from "@/utils/config";
 import PostSearchUseCase from "@/infrastructure/usecases/PostSearchUseCase";
-import PrismaSearchActionRepoStrategy from "@/infrastructure/repositories/PrismaSearchActionRepoStrategy";
+import PrismaSearchActionRepoStrategy from "@/repositories/PrismaSearchActionRepoStrategy";
 
 /**
  * ExpressJS Request handler function that fetches keyword key
