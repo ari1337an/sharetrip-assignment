@@ -1,8 +1,8 @@
 // import components
 import http from "http";
 import app from "./app";
-import config from "./utils/config";
-import logger from "./utils/logger";
+import config from "@/utils/config";
+import logger from "@/utils/logger";
 
 // prepare
 const server = http.createServer(app);
