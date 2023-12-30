@@ -1,4 +1,6 @@
 import PostEntity from "@/infrastructure/entities/PostEntity";
+import SearchActionRepoStrategy from "@/infrastructure/repositories/interfaces/SearchActionRepoStrategy";
+import SearchActionEntity from "@/infrastructure/entities/SearchActionEntity";
 
 /**
  * Use Case Class
@@ -9,12 +11,16 @@ export default class PostSearchUseCase {
    * based on title and body of post and stores search results into database
    *
    * @param keyword string
+   * @param userIp string
    * @param externalAPIAddress string
+   * @param repository SearchActionRepoStrategy
    * @returns Promise<PostEntity[]>
    */
   async execute(
     keyword: string,
-    externalAPIAddress: string
+    userIp: string,
+    externalAPIAddress: string,
+    repository: SearchActionRepoStrategy
   ): Promise<PostEntity[]> {
     try {
       // Fetch posts from an external source (replace with actual logic)
@@ -23,10 +29,21 @@ export default class PostSearchUseCase {
       // Search and filter posts based on the single keyword
       const filteredPosts = this.filterPosts(posts, keyword);
 
-      // TODO: Add the search results to the database
-
+      // Create SearchAction Object
+      const searchActionData = {
+        uid: "",
+        timestamp: (new Date()).toISOString(),
+        userIP: userIp,
+        searchresults: filteredPosts,
+      };
+      const searchAction = new SearchActionEntity(searchActionData);
+      
+      // Add the search results to the database
+      const output = await repository.recordSearchAction(searchAction);
+      
       // Return the filtered posts
-      return filteredPosts;
+      return {...output, matchedResults: filteredPosts}
+      
     } catch (error) {
       console.error("Error in PostSearchUseCase:", error);
       throw error;
