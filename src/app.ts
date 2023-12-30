@@ -12,6 +12,9 @@ const app = express()
 // Set port
 app.set("port", config.PORT)
 
+// Make ip address available to express requests
+app.set('trust proxy', true)
+
 // Routes
 import searchRoute from '@/routes/searchRoute'
 
