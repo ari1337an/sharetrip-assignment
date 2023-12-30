@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model SearchAction {
+  uid String @id @default(auto()) @map("_id") @db.ObjectId
+  timestamp DateTime @default(now())
+  userIP String
+  searchResults SearchResult[]
+}
+
+model SearchResult {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId Int
+  postId Int
+  title String
+  body String
+  searchAction SearchAction @relation(fields: [searchActionId], references: [uid])
+  searchActionId  String @db.ObjectId
+}
