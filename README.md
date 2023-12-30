@@ -5,11 +5,12 @@
 - [Introduction](#introduction)
 - [Production Server](#production-server)
 - [Tech Stack](#tech-stack)
+- [Onboarding Docs](#onboarding-docs)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Environment Variables](#environment-variables)
-- [Onboarding Docs](#onboarding-docs)
+
   
 ## Introduction
 
@@ -30,6 +31,14 @@ Visit the [https://arian-sharetrip.onrender.com/search?keyword=tempora](https://
    - Prisma ✅
    - MongoDB ✅
    - Zod ✅
+
+## Onboarding Docs
+
+Commit messages style/structure: [Conventional Commit Message Style](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
+Project architecture:
+
+![Clean Architecture Diagram](docs/architecture.jpg)
 
 ## Getting Started
 
@@ -65,8 +74,3 @@ DATABASE_URL="mongodb+srv://<username>:<password>@<hostname>/<database>"
 ```
 
 Refer to the `sampleenv` file for a sample structure of the environment file.
-
-## Onboarding Doc
-
-Commit messages style/structure: [Conventional Commit Message Style](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
-
